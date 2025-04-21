@@ -52,25 +52,25 @@ def _plot_results(results, plt):
 
 def plot_side_by_side(results_a, results_b, name):
     import matplotlib.pyplot as plt
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
+    fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True, figsize=(20, 5))
 
     ax1.set_title("Alice", fontsize=20)
     ax2.set_title("Bob", fontsize=20)
-    ax2.set_xlabel("Dialog Iterations", fontsize=14)
+    # ax2.set_xlabel("Dialog Iterations", fontsize=14)
 
     _plot_results(results_a, ax1)
     _plot_results(results_b, ax2)
     plt.savefig(f'.output/{name}.png', bbox_inches='tight')
     plt.show()
 
-def plot_one(results, name):
+def plot_one(results, filename, title):
     import matplotlib.pyplot as plt
-    fig = plt.figure(figsize=(10, 5))
+    fig = plt.figure(figsize=(9, 6))
     ax1 = fig.add_subplot(111)
 
-    ax1.set_title("Alice", fontsize=20)
-    ax1.set_xlabel("Dialog Iterations", fontsize=14)
+    # ax1.set_title(title)
+    # ax1.set_xlabel("Dialog Iterations", fontsize=14)
 
     _plot_results(results, ax1)
-    plt.savefig(f'.output/{name}.png', bbox_inches='tight')
+    plt.savefig(f'.output/{filename}.png', bbox_inches='tight')
     plt.show()

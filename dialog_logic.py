@@ -62,7 +62,9 @@ def communicate(alice_preference, bob_preference, transition, iterations=1, name
         alice_results.append(alice_preference)
         bob_results.append(bob_preference)
         # return alice_result, bob_result
-    plot_side_by_side(alice_results, bob_results, name)
+    # plot_side_by_side(alice_results, bob_results, name)
+    plot_one(alice_results, f"{name}-alice", "Alice")
+    plot_one(bob_results, f"{name}-bob", "Bob")
     # print("\nAlice")
     # print('\n'.join(str(x) for x in alice_results))
     # plot_results(alice_results)

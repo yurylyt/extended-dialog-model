@@ -3,9 +3,12 @@ Supporting code for my article on extended dialog model (resistance, persuasiven
 
 ## Local setup
 1. Clone the repository.
-2. Initialize a virtual environment `python -m venv venv`.
-3. Install the required packages using `pip install -r requirements.txt`.
-4. Run the Jupyter notebook `simulations.ipynb`.
+2. Initialize a virtual environment `python -m venv .venv`.
+3. Activate the virtual environment:
+   - On Windows: `.venv\Scripts\activate`
+   - On macOS/Linux: `source .venv/bin/activate`
+4. Install the required packages using `pip install -r requirements.txt`.
+5. Run the Jupyter notebook `simulations.ipynb`.
 
 ## Files
 - `simulations.ipynb`: Jupyter notebook containing simulations for different parameters of Alice and Bob.
