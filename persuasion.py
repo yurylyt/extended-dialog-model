@@ -1,11 +1,10 @@
 from dialog_logic import *
 
 def choice_probabilities(ra, cb):
-    z = ra + cb - ra * cb
     return (
-        ra * (1 - cb) / z,
-        (1 - ra) * cb / z,
-        ra * cb / z
+        1 - cb,
+        (1 - ra) * cb,
+        ra * cb
     )
 
 def locate(from_state, to_state):
