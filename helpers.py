@@ -60,7 +60,7 @@ def plot_side_by_side(results_a, results_b, name):
 
     _plot_results(results_a, ax1)
     _plot_results(results_b, ax2)
-    plt.savefig(f'.output/{name}.png', bbox_inches='tight')
+    plt.savefig(f'.output/{name}.pdf', bbox_inches='tight')
     plt.show()
 
 def plot_one(results, filename, title):
@@ -72,5 +72,5 @@ def plot_one(results, filename, title):
     # ax1.set_xlabel("Dialog Iterations", fontsize=14)
 
     _plot_results(results, ax1)
-    plt.savefig(f'.output/{filename}.png', bbox_inches='tight')
+    plt.savefig(f'.output/{filename}.pdf', bbox_inches='tight')
     plt.show()
